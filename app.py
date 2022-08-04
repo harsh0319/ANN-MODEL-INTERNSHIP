@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
-from flask_ngrok import run_with_ngrok
 import pickle
 app = Flask(__name__)
 from keras.models import load_model
@@ -45,7 +44,7 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
-run_with_ngrok(app)
+
 
 @app.route('/')
 def home():
