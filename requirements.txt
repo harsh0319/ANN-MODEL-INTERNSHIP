@@ -15,7 +15,7 @@ python-dateutil
 pytz
 requests
 opencv-python
-sklearn
+scikit-learn
 six
 
 threadpoolctl
